@@ -1,0 +1,7 @@
+---
+# tasks file for default
+
+
+- name: Instalando docker CE
+  include: docker.yaml
+

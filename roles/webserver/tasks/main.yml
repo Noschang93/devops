@@ -1,0 +1,15 @@
+---
+# tasks file for webserver
+
+- name: rodando playbook para criação e configuração do webserver nas maquias debian
+  include: debianws.yaml
+  when: ansible_os_family == "Debian"
+
+- name: instalando webserver nas maquinas redHat
+  include: redhatws.yaml
+  when: ansible_os_family == "RedHat"
+
+
+- name: rodando playbook da pagina index
+  include: index.yaml
+

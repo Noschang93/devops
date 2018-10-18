@@ -1,0 +1,7 @@
+---
+
+- name: chamando a segunda role para configurar o webserver
+  hosts: all
+  roles:
+   - webserver
+

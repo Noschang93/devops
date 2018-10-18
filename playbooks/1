@@ -1,0 +1,12 @@
+---
+
+- name: criando uma playbook com variaveis em hosts e pacote
+  hosts: "{{hosts}}"
+  vars:
+   - hosts: default 
+   - package: package
+  tasks:
+   - name: instalando package
+     package:
+      name: "{{package}}"
+      tate: present 

@@ -1,0 +1,6 @@
+
+- name: instalando docker CE
+  package:
+   shell: |
+   https://get.docker.com -o get-docker.sh
+   sh get-docker.sh

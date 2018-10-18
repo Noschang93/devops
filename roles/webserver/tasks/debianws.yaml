@@ -1,0 +1,11 @@
+---
+
+- name: garantindo a instalação do servidor web para as maquinas debian
+  package:
+   name: 
+    - apache2
+   update_cache: yes
+   state: present
+
+
+

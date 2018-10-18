@@ -1,0 +1,7 @@
+---
+
+- name: chamando a minha primeira role
+  hosts: docker
+  roles:
+   - dockerCe
+

@@ -1,0 +1,27 @@
+---
+
+- name: criando uma playbook com variaveis em hosts e pacote
+  hosts: "{{maquinas}}"
+  vars:
+   - maquinas: default 
+  tasks:
+   - name: instalando pacotes gerais
+     package:
+       name: 
+        - htop
+        - cowsay
+        - figlet
+        - vim
+       state: present
+
+   - name: instalando pacotes Debian
+     package:
+        name: apache2
+        state: present
+     when: ansible_os_family == "Debian"
+     
+   - name: instalando pacotes RedHat
+     package:
+       name: httpd
+       state: present
+     when: ansible_os_family == "RedHat

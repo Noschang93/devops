@@ -1,0 +1,10 @@
+---
+
+- name: garantindo a instalação do servidor web para as maquinas RedHat
+  package:
+   name: 
+    - httpd
+   state: present
+
+
+
